@@ -39,7 +39,7 @@
     //ordenació alfabètica inversa del nom
     llistaPersones.sort((o1,o2) -> o2.getNom().compareTo(o1.getNom()));
     ```
-7. Crea un _Reference Method_i utilitza'l per imprimir totes les persones de la Collection amb __foreach__
+7. Crea un _Reference Method_ i utilitza'l per imprimir totes les persones de la Collection amb __foreach__
     ```java
    //substituir pel foerech amb el reference method 
    for(Persona p: llistaPersones) {
@@ -53,8 +53,12 @@ Esbrina com fer els puts al map usant aquests mètodes **computeIfPresent** i **
 
 10. Treu un llistat de les persones DONA. Cal fer servir STREAM.
 
-11. Treu un llistat dels 2 HOMES més joves. Fer servir STREAM
+11. Crea un List amb els menors de 25
 
-12. Esborrar del llistat les persones entre 30 i 40 anys (removeIf)
+12. Llistat de Persones que tinguin una 'a' o 'A' al seu nom
+
+13. Treu un llistat dels 2 HOMES més joves. Fer servir STREAM
+
+14. Esborrar del llistat les persones entre 30 i 40 anys (removeIf)
 
  
