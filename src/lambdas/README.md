@@ -53,11 +53,11 @@ Esbrina com fer els puts al map usant aquests mètodes **computeIfPresent** i **
 
 10. Treu un llistat de les persones DONA. Cal fer servir STREAM.
 
-11. Crea un List amb els menors de 25
+11. Crea un List amb els menors de 25 (stream)
 
-12. Llistat de Persones que tinguin una 'a' o 'A' al seu nom
+12. Llistat de Persones que tinguin una 'a' o 'A' al seu nom (stream)
 
-13. Treu un llistat dels 2 HOMES més joves. Fer servir STREAM
+13. Treu un llistat dels 2 HOMES més joves. (stream)
 
 14. Esborrar del llistat les persones entre 30 i 40 anys (removeIf)
 
