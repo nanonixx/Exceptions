@@ -61,4 +61,10 @@ Esbrina com fer els puts al map usant aquests mètodes **computeIfPresent** i **
 
 14. Esborrar del llistat les persones entre 30 i 40 anys (removeIf)
 
+15. Llistat de totes les dates de naixament suman-t'hi dos dies (no cal actualitzar la data de les persones, només treure el calcul)
+
+16. Rejovenir 2 anys a totes les persones. Que a totes les persones els quedi actualitzada la nova data de naixament (stream)
+
+
+
  
