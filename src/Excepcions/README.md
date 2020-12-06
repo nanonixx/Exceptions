@@ -2,10 +2,10 @@
 
 Quan Java executa un codi i es troba amb una situació que no pot afrontar, o:
  - atura el programa
- - crea un tipus especial de dades, anomenat excepció, i descomptat, aquesta excepció és un objecte.
+ - crea un tipus especial de dades, anomenada excepció, i que per descomptat, aquesta excepció és un objecte.
 
-Ambdues accions són el llançament d'una Excemtion.
-Podriem que es genera una excepció quan Java no té ni idea de què fer amb el nostre codi.
+Ambdues accions són el llançament d'una Exception.
+Podríem dir que es genera una excepció quan Java no té ni idea de què fer amb el nostre codi.
 
 Què passa després?
 
