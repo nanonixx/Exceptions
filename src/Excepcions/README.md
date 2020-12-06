@@ -18,9 +18,9 @@ identificar-les i gestionar-les de manera eficient.
 Això és possible pel fet que totes les possibles excepcions es poden classificar i 
 s'hi pot reaccionar adequadament.
 
-És possible que ja conegueu un missatge d'error d'excepció com el següent: IndexOutBoundException
+<img src="./exceptionTree.png" width="500" />
 
-<img src="./exceptionTree.png" width="120" />
+És possible que ja conegueu un missatge d'error d'excepció com el següent: IndexOutBoundException  
 
-Però també teniu la possibilitat de crear les vostres pròpies excepcions, amb l'únic requisit que han de derivar de Exception.
+Però també teniu la possibilitat de crear les vostres pròpies excepcions, amb l'únic requisit que han de derivar de Exception.  
 
