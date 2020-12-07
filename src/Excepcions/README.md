@@ -20,7 +20,7 @@ s'hi pot reaccionar adequadament.
 
 <img src="./exceptionTree.png" width="500" />
 
-És possible que ja conegueu un missatge d'error d'excepció com el següent: [IndexOutBoundException](https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html)  
+És possible que ja conegueu un missatge d'error d'excepció com el següent: [IndexOutOfBoundsException](https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html)  
 
 Però també teniu la possibilitat de crear les vostres pròpies excepcions, amb l'únic requisit que han de derivar de Exception.  
 
