@@ -20,17 +20,32 @@ public class OperacionsBanc {
         return true;
     }
 
-    public static boolean verifyBankAccount(String numCompte) throws BankAccountException {
-            try {
-                 //si el numerico se corresponde con un cuenta banco control comandas
-            } catch (Exception e){
-                throw new BankAccountException(ExceptionMessage.ACCOUNT_NOT_FOUND);
-            }
-            return true;
+    public boolean verifyBankAccount(String numCompte) throws BankAccountException {
+
+              for (CompteEstalvi c : compteEstalviList) {
+                  if (c.getNumCompte().equals(numCompte)) return true;
+              }
+              throw new BankAccountException(ExceptionMessage.ACCOUNT_NOT_FOUND);
     }
 
+
     public void transferir(String numCompte1, String numCompte2, double quantitat) throws BankAccountException {
+
         if (verifyBankAccount(numCompte1) && verifyBankAccount(numCompte2)){
+            for (CompteEstalvi c : compteEstalviList) {
+                if (c.getNumCompte().equals(numCompte1)) {
+                    if (c.getSaldo() < quantitat) throw new BankAccountException(ExceptionMessage.ACCOUNT_OVERDRAFT);
+                    //lo de arriba es el treure
+                    else {
+                        for (CompteEstalvi c2 : compteEstalviList) {
+                            if (c2.getNumCompte().equals(numCompte2)) {
+                                c.treure(quantitat);
+                                c2.ingressar(quantitat);
+                            }
+                        }
+                    } //TODO hacer las cosas como recs
+                }
+            }
 
         }
     }
