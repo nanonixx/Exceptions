@@ -11,8 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 public class OperacionsBanc {
-    OperacionsBanc operacionsBanc = new OperacionsBanc();
-    ControlClient controlClient = new ControlClient();
+    ControlClient controlClient;
 
 
     Random random = new Random();
@@ -49,8 +48,9 @@ public class OperacionsBanc {
 
         CompteEstalvi compteEstalvi = new CompteEstalvi(String.valueOf(Math.abs(random.nextInt())));
 
-        for (Client c : controlClient.getClientList()) {
-            if (c.getDNI().equals(dni)) {
+        for (Client c : ControlClient.clientList) {
+            String cDni = c.getDNI();
+            if (cDni.equals(dni)) {
                 compteEstalvi.addUser(c);
                 userFound = true;
             }
@@ -64,7 +64,7 @@ public class OperacionsBanc {
             System.err.println(e);
             return;
         }
-        operacionsBanc.getCompteEstalviList().add(compteEstalvi);
+        compteEstalviList.add(compteEstalvi);
     }
 
     private List<CompteEstalvi> compteEstalviList = new ArrayList<>();
@@ -99,7 +99,7 @@ public class OperacionsBanc {
                                 c2.ingressar(quantitat);
                             }
                         }
-                    } //TODO hacer las cosas como recs
+                    }
                 }
             }
 

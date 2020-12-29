@@ -43,6 +43,8 @@ public class Menu {
                 System.out.println("DNI del cliente al que vincular la cuenta: ");
                 String d = input.nextLine();
 
+                operacionsBanc.createAccount(d);
+
                 break;
 
             case "4":

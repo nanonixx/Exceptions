@@ -14,7 +14,7 @@ public class ControlClient {
         this.clientList = clientList;
     }
 
-    private List<Client> clientList = new ArrayList<Client>();
+    static List<Client> clientList = new ArrayList<Client>();
 
     public void addClient(String nom, String cognom, String dni){
         try {
