@@ -8,10 +8,66 @@ import Excepcions.ActivitatExceptions.Model.CompteEstalvi;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class OperacionsBanc {
+    OperacionsBanc operacionsBanc = new OperacionsBanc();
+    ControlClient controlClient = new ControlClient();
 
-    List<CompteEstalvi> compteEstalviList = new ArrayList<>();
+
+    Random random = new Random();
+    public List<CompteEstalvi> getCompteEstalviList() {
+        return compteEstalviList;
+    }
+
+    public void setCompteEstalviList(List<CompteEstalvi> compteEstalviList) {
+        this.compteEstalviList = compteEstalviList;
+    }
+
+    public void addUserToBankAccount(int index, String dni){
+        boolean userFound = false;
+        CompteEstalvi compte =compteEstalviList.get(index);
+
+        for (Client c : controlClient.getClientList()) {
+            if (c.getDNI().equals(dni)) {
+                compte.addUser(c);
+                userFound = true;
+            }
+        }
+        try {
+            if (!userFound) {
+                throw new ClientAccountException(ExceptionMessage.ACCOUNT_NOT_FOUND);
+            }
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+
+
+    public void createAccount(String dni){
+        boolean userFound = false;
+
+        CompteEstalvi compteEstalvi = new CompteEstalvi(String.valueOf(Math.abs(random.nextInt())));
+
+        for (Client c : controlClient.getClientList()) {
+            if (c.getDNI().equals(dni)) {
+                compteEstalvi.addUser(c);
+                userFound = true;
+            }
+        }
+
+        try {
+            if (!userFound) {
+                throw new ClientAccountException(ExceptionMessage.ACCOUNT_NOT_FOUND);
+            }
+        }catch (Exception e){
+            System.err.println(e);
+            return;
+        }
+        operacionsBanc.getCompteEstalviList().add(compteEstalvi);
+    }
+
+    private List<CompteEstalvi> compteEstalviList = new ArrayList<>();
 
     public static boolean verifyDNI(String dni) throws ClientAccountException {
         if (dni.length() != 9 ) {

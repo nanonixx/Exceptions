@@ -3,12 +3,22 @@ package Excepcions.ActivitatExceptions.Model;
 import Excepcions.ActivitatExceptions.Exceptions.BankAccountException;
 import Excepcions.ActivitatExceptions.Exceptions.ExceptionMessage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CompteEstalvi {
     private String numCompte;
     private double saldo;
-    private List<Client> llista_usuaris;
+    private List<Client> llista_usuaris = new ArrayList<Client>();
+
+    @Override
+    public String toString() {
+        return "CompteEstalvi{" +
+                "numCompte='" + numCompte + '\'' +
+                ", saldo=" + saldo +
+                ", nombre_usuaris=" + llista_usuaris.size() +
+                '}';
+    }
 
     public CompteEstalvi(String numCompte) {
         this.numCompte = numCompte;
