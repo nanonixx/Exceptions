@@ -15,6 +15,15 @@ public class Client {
 
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "Nom='" + Nom + '\'' +
+                ", Cognoms='" + Cognoms + '\'' +
+                ", DNI='" + DNI + '\'' +
+                '}';
+    }
+
     public String getNom() {
         return Nom;
     }
